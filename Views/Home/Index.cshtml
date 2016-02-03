@@ -1,0 +1,139 @@
+﻿<html>
+<head>
+    <title>hellow</title>
+    <script>
+
+        // Creating an element using simple JavaScript
+
+        //var count = 0;
+        //function fun()
+        //{
+        //    var a = document.createElement('button');
+        //    var b = document.createTextNode('Button Value');
+        //    a.appendChild(b);
+        //    document.body.appendChild(a);
+        //}
+
+    </script>
+</head>
+<body>
+    <div id="inputs1">
+
+
+        <input class="myClass" type="text" id="inputs1id1" name="id" value="Text Input" />
+        <input class="myClass" type="button" id="inputs1id2" name="id" value="Button Input" />
+
+        <button class="myClass" type="button" name="b" id="inputs1button1">Inside Div</button>
+        <button class="myClass" type="button" name="b" id="inputs1button2">Inside Div</button>
+
+    </div>
+
+    <br />
+
+    <br />
+
+
+    <div id="inputs2">
+
+
+        <input class="myClass" type="text" id="inputs2id1" name="id" value="tahir" />
+        <input class="myClass" type="button" id="inputs2id2" name="id" value="tahir" />
+
+        <button class="myClass" type="button"  name="b" id="inputs2button">Inside Div</button>
+
+    </div>
+    
+    <br />
+
+    <br />
+    
+    <button class="myClass" type="button" onclick="fun()" name="b" id="b">Outside Div</button>
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script>
+        // Working using jQuery
+
+        // Selecting an element using jQuery
+        // 3 ways of selecting an element using ID, Class and Tag
+
+        $(document).ready(function () {
+
+            // ACCESSING ELEMENS USING JQUERY
+            // ------------------------------
+
+            // accessing element using id
+            //$('#id').val("Value changed using jQuery");
+
+            // Accessing element using class
+            //$('.myClass').val("Value changed using jQuery");
+
+            // Accessing element using tag
+            //$('input').val("Value changed of input tags using jQuery");
+
+            // Changing the text node value of any element
+            //$('div:last button').text("Changed text node value");
+
+            // WORKING WITH ATTRIBUTE VALUES AND TEXT NODE VALUES
+            // --------------------------------------------------
+            //jQuery('div').last().find('button').text('Hello, me changed!');
+
+            //$('div#inputs1 #inputs1button2').text('Changed');
+
+            //$('div#inputs1 input').val('Value changed');
+
+            // Get value of input
+
+            // var temp = $('div#inputs1 #inputs1id2').val();
+
+            // $('div#inputs1 #inputs1id2').val($('div#inputs1 #inputs1id2').val() + ' appended string');
+
+            // $('div#inputs1 button, div#inputs2 button').text('Changed');
+
+            // CREATING ELEMENTS USING JQUERY
+            // ------------------------------
+
+            // Functions list
+            // 1 - Append
+            // 2 - Prepend
+            // 3 - AppendTo
+            // 4 - PrependTo
+
+            // $('div#inputs2').append('<h1>This is heading h1</h1>');
+
+            // $('div#inputs2').prepend('<h1>This is heading h1</h1>');
+
+            // $('<h1>This is heading h1</h1>').appendTo('div#inputs2');
+
+            // $('<h1>This is heading h1</h1>').prependTo('div#inputs2');
+
+            // Working with CSS
+            // $('div#inputs2').css({'background-color' : 'red', 'height' : '50px', 'text-align' : 'center', 'padding-top' : '20px'});
+
+            // EVENT HANDLING
+            // --------------
+
+            var count = 1;
+
+            //$('button').click(function () {
+            //    $('body').append('<p>' + count++ + '</p>');
+            //});
+
+            //$('div input[type="password"]').on('keypress', function () {
+            //    $('body').append('<p>' + $(this).val() + '</p>');
+            //});
+
+
+            // WORKING WITH ANIMATIONS USING JQUERY
+            // ------------------------------------
+
+            //$('div#inputs1 *').on('click', function () {
+            //    $('div#inputs2').slideToggle();
+            //});
+
+            //$('div#inputs2 *').on('click', function () {
+            //    $('div#inputs1').fadeToggle("3000");
+            //});
+        });
+
+    </script>
+</body>
+</html>

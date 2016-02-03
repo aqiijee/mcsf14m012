@@ -1,0 +1,78 @@
+﻿@model Exams.User
+
+<html>
+<head>
+    <title>hellow</title>
+    <script>
+
+        // Creating an element using simple JavaScript
+
+        //var count = 0;
+        //function fun()
+        //{
+        //    var a = document.createElement('button');
+        //    var b = document.createTextNode('Button Value');
+        //    a.appendChild(b);
+        //    document.body.appendChild(a);
+        //}
+
+    </script>
+</head>
+<body>
+
+
+        <input class="myClass" type="text" id="id1" name="id1" value="Text Input" />
+        <input class="myClass" type="button" id="id2" name="id2" value="Button Input" />
+
+        <a href="/Home/NewView">Call Action Method</a>
+        <button class="myClass" type="button" name="id3" id="id3">Button 1</button>
+        <button class="myClass" type="button" name="id4" id="id4">button2</button>
+    <div class="more">
+        <h1>i love pakistan</h1>  
+        <h1>i love pakistan</h1>  
+        <h1>i love pakistan</h1>    
+    </div>
+    <br />
+    @Html.TextBoxFor(m => m.FirstName)
+    <button class="myClass" type="button" name="button3" id="b">Outside Div</button>
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // .LOAD Function
+            // --------------
+            //$('#id1').on('click', function () {
+            //    $('.more').load('Home/NewView?FirstName=Asad');
+            //});
+
+            // .AJAX Function
+            // --------------
+            //$('#id2').on('click', function () {
+            //    $.ajax('Home/NewView', {
+            //        success: function (abc) {
+            //            $('.more').replaceWith(abc).slideDown();
+            //        },
+            //        data: { 'FirstName': 'Asad', 'LastName': 'Ali' },
+            //        timeout: 1000,
+            //        error: function (request) {
+            //            alert('An error occured.');
+            //        }        
+            //    });
+            //});
+
+            //$('#id2').on('click', function () {
+            //    $.getJSON('Home/GetData', function (data) {
+            //        $('.more').replaceWith('<h1>Person One: ' + data[0] + ' Person Two: ' + data[1] + '</h1>');
+            //    });
+            //});
+
+            $('#id2').on('click', function () {
+                $.getJSON('Home/GetData?pass=' + $('#id1').val(), function (data) {
+                    $('.more').replaceWith('<h1>' + data + '</h1>');
+                });
+            });
+
+        });
+        
+    </script>
+</body>
+</html>
